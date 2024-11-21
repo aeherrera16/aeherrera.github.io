@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormRegistro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            const entregaPropietarioCheckbox = document.getElementById("entregaPropietario");
+            const entregaTerceroCheckbox = document.getElementById("entregaTercero");
+            const enviarButton = document.getElementById("enviarDatos");
+            const guardarButton = document.getElementById("guardarDatos");
+            const informacionConfidencialForm = document.getElementById("informacionConfidencial");
+            const direccionEnvioForm = document.getElementById("direccionEnvio");
+
+            // Función para resetear formularios y botones
+            const resetFormsAndButtons = () => {
+                informacionConfidencialForm.style.display = "none";
+                direccionEnvioForm.style.display = "none";
+                enviarButton.disabled = true;
+                guardarButton.style.display = "none";
+            };
+
+            // Checkbox "Entrega al Propietario"
+            entregaPropietarioCheckbox.addEventListener("change", function () {
+                if (this.checked) {
+                    resetFormsAndButtons();
+                    direccionEnvioForm.style.display = "block";
+                    enviarButton.disabled = false; // Activar botón ENVIAR
+                    entregaTerceroCheckbox.checked = false; // Desactivar el otro checkbox
+                } else {
+                    resetFormsAndButtons();
+                }
+            });
+
+            // Checkbox "Entrega a un Tercero"
+            entregaTerceroCheckbox.addEventListener("change", function () {
+                if (this.checked) {
+                    resetFormsAndButtons();
+                    informacionConfidencialForm.style.display = "block";
+                    guardarButton.style.display = "block"; // Mostrar botón GUARDAR
+                    entregaPropietarioCheckbox.checked = false; // Desactivar el otro checkbox
+                } else {
+                    resetFormsAndButtons();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Formulario Dinámico</h1>
+
+        <div class="form-check mt-4">
+            <input class="form-check-input" type="checkbox" id="entregaPropietario">
+            <label class="form-check-label" for="entregaPropietario">
+                Entrega al Propietario
+            </label>
+        </div>
+
+        <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" id="entregaTercero">
+            <label class="form-check-label" for="entregaTercero">
+                Entrega a un Tercero
+            </label>
+        </div>
+
+        <!-- Formulario de Dirección de Envío -->
+        <form id="direccionEnvio" class="mt-4 border rounded p-3 bg-light shadow-sm" style="display: none;">
+            <h3>Dirección de Envío</h3>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección">
+            </div>
+            <div class="mb-3">
+                <label for="ciudad" class="form-label">Ciudad:</label>
+                <input type="text" class="form-control" id="ciudad" placeholder="Ingrese su ciudad">
+            </div>
+        </form>
+
+        <!-- Formulario de Información Confidencial -->
+        <form id="informacionConfidencial" class="mt-4 border rounded p-3 bg-light shadow-sm" style="display: none;">
+            <h3>Información Confidencial</h3>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su teléfono">
+            </div>
+        </form>
+
+        <button id="enviarDatos" class="btn btn-primary mt-4" disabled>ENVIAR DATOS</button>
+        <button id="guardarDatos" class="btn btn-secondary mt-4" style="display: none;">GUARDAR</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

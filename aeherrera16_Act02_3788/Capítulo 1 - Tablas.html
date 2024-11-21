@@ -1,0 +1,134 @@
+<!DOCTYPE html>	
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" <![endif]-->
+<!--[if IE 8]><!-->		<html class="no-js"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge, chrome=1">
+	<title>Limpiar tabla</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Tablas-Ejercicio 2</h1><br>
+
+
+		<div class="table-responsive">
+			<table class="table table-condensed" id="tablaUsuarios">
+			<thead>
+				<tr class="active">
+					<th>#</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Apellido</th>
+					<th>Twitter</th>
+					<th>Curso</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Irvin</td>
+					<td>Ortiz</td>
+					<td>Vega</td>
+					<td>@IrvinOrtiz28</td>
+					<td>Bootstrap 3</td> 
+				</tr>
+				<tr class="success">
+					<td>2</td>
+					<td>Mayra</td>
+					<td>Villanueva</td>
+					<td>Ruiz</td>
+					<td>@MayraUsaV</td>
+					<td>CSS 3</td> 
+				</tr>
+				<tr class="warning">
+					<td>3</td>
+					<td>Julio</td>
+					<td>Grados</td>
+					<td>Caballero</td>
+					<td>@JuGra07</td>
+					<td>JavaScript</td> 
+				</tr>
+				<tr class="danger">
+					<td>4</td>
+					<td>Irvin</td>
+					<td>Ortiz</td>
+					<td>Vega</td>
+					<td>@IrvinOrtiz28</td>
+					<td>Bootstrap 3</td> 
+				</tr>
+				<tr class="info">
+					<td>5</td>
+					<td>Irvin</td>
+					<td>Ortiz</td>
+					<td>Vega</td>
+					<td>@IrvinOrtiz28</td>
+					<td>Bootstrap 3</td> 
+				</tr>
+
+				<tr>
+					<td class="active">6</td>
+					<td class="success">Irvin</td>
+					<td class="warning">Ortiz</td>
+					<td class="danger">Vega</td>
+					<td class="info">@IrvinOrtiz28</td>
+					<td>Bootstrap 3</td> 
+				</tr>
+			</tbody>
+		</table>
+
+		</div>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#ejemplo-5">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="./Capitulo 4 - Barra de menu.html" class="navbar-brand">Grupo 1</a>
+				</div>
+				<div class="collapse navbar-collapse" id="ejemplo-5">
+					<ul class="nav navbar-nav">
+						<li><a href="./Capítulo 1 - Tablas.html">Tabla 1</a></li>
+						hola mundo
+						<li><a href="./index.html">Tabla 2</a></li>
+						quemas
+						<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">GITHUB<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Herrera Anahy</a></li>
+								<li><a href="#">Paredes Camila</a></li>
+								<li class="divider"></li>
+								<li><a href="Index_Act01.html" target="_blank"><strong>Pincha Cristian</strong></a></li>
+
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="buscar">
+						</div>
+						<boton class="btn btn-primary">Buscar</boton>
+					</form>
+				</div>
+			</div>
+		</nav>
+				<!-- Botón para limpiar la tabla -->
+				<button class="btn btn-danger" onclick="limpiarTabla()">Limpiar Tabla</button><br><br>
+		<br><br><br><br>
+	</div>
+	<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
